@@ -23,14 +23,18 @@ header {
 }
 
 /* Navigation */
-.main-menu {
+
+button{
+    align-items: right;
+}
+.navbar {
     margin-left: 227px;
     font-weight: 400;
 }
-.main-menu ul li {
+.navbar-nav .nav-item {
     list-style-type: none;
     display: inline-block;
-    float: left;
+    float: none;
     padding-left: 25px;
     padding-right: 25px;
     border-left: 1px solid rgba(202, 204, 202, 0.6);
@@ -38,20 +42,21 @@ header {
     text-transform: uppercase;
     font-size: 14px;
 }
-.main-menu ul li a {
+.navbar-nav .nav-item a {
     text-decoration: none;
     color: #888;
 }
-.main-menu ul li a:hover {
+.navbar-nav .nav-item a:hover {
     color: #9ed034;
 }
-.main-menu ul li.active {
+.navbar-nav .nav-item.active {
     background: #9ed034;
     border: none;
 }
-.main-menu ul li.active a {
+.navbar-nav .nav-item.active a {
     color: #fff;
 }
+
 
 /* Main */
 main {
@@ -79,14 +84,14 @@ section #partners {
     margin: 0 auto;
     text-align: center;
 }
-section #partners .partner {
+section #partners [class^='partner'] {
     display: inline-block;
     margin: 0 0.75em;
     padding: 1.3em 1.5em;
     background-color: #fff;
     border-radius: 50%;
 }
-section #partners .partner img {
+section #partners [class^='partner'] img {
     width: 90px;
     height: 90px;
 }
@@ -150,7 +155,7 @@ footer #nondisclaimer .social .fa-instagram {
 /* ACTIVATE BELOW WHEN TESTING NAVIGATION AND OTHERS FOR RWD */
 
 /* Media Queries */
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     footer #nondisclaimer .copy {
         padding: 3.5em 0em 3.5em 0em;
         text-align: center;
@@ -188,4 +193,4 @@ footer #nondisclaimer .social .fa-instagram {
         min-height: 450px;
         margin-top: 1em;
       }
-} */
+} 
